@@ -106,6 +106,7 @@ async def subscribe():
                             await websocket.send(json.dumps(payload))
                             print("Unsubscribed from token trades.")
                             sys.exit(0)
+                            #Change the Solana buy amount if desired
                         elif sol_buy >= 3.0 and sell:
                             '''Replace API key here'''
                             response = requests.post(url="https://pumpportal.fun/api/trade?api-key=YOUR KEY", data={
